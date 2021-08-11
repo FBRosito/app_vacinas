@@ -46,7 +46,7 @@ class _FirstScreenState extends State<FirstScreen> {
                 height: 125,
               ),
             ),
-            RaisedButton(
+            ElevatedButton(
                 child: Text(
                   "Entrar",
                   textAlign: TextAlign.center,
