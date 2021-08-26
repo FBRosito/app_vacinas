@@ -1,3 +1,6 @@
+import 'dart:ui';
+
+import 'package:app_vacinas/screens/privacy_screen.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -16,6 +19,7 @@ class _LoginScreenState extends State<LoginScreen> {
     255,
   );
 
+  bool continueConnected = false;
   String dropdownValue = 'Selecione sua ocupação';
 
   @override
@@ -81,9 +85,11 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                       ),
                     ),
+                    Padding(padding: EdgeInsets.only(bottom: 10)),
                     DropdownButton<String>(
+                      focusColor: Colors.blue[600],
                       isExpanded: true,
-                      dropdownColor: Colors.black38,
+                      dropdownColor: Colors.blue[300],
                       value: dropdownValue,
                       icon: const Icon(
                         Icons.arrow_downward,
@@ -94,7 +100,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       style: const TextStyle(color: Colors.white),
                       underline: Container(
                         height: 2,
-                        color: Colors.white,
+                        color: Colors.black12,
                       ),
                       onChanged: (String? newValue) {
                         setState(() {
@@ -114,6 +120,86 @@ class _LoginScreenState extends State<LoginScreen> {
                           child: Text(value),
                         );
                       }).toList(),
+                    ),
+                    TextFormField(
+                      decoration: InputDecoration(
+                        labelText: "Estado",
+                        labelStyle: TextStyle(
+                          color: Colors.white,
+                        ),
+                        prefixIcon: Icon(
+                          Icons.location_on,
+                          color: Colors.white,
+                        ),
+                        border: UnderlineInputBorder(
+                          borderSide: BorderSide(color: Colors.white),
+                        ),
+                        focusedBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(color: Colors.white),
+                        ),
+                      ),
+                    ),
+                    Padding(padding: EdgeInsets.only(bottom: 10)),
+                    TextFormField(
+                      decoration: InputDecoration(
+                        labelText: "Cidade",
+                        labelStyle: TextStyle(
+                          color: Colors.white,
+                        ),
+                        prefixIcon: Icon(
+                          Icons.location_city,
+                          color: Colors.white,
+                        ),
+                        border: UnderlineInputBorder(
+                          borderSide: BorderSide(color: Colors.white),
+                        ),
+                        focusedBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(color: Colors.white),
+                        ),
+                      ),
+                    ),
+                    Padding(padding: EdgeInsets.only(bottom: 10)),
+                    Row(
+                      children: [
+                        Checkbox(
+                          value: this.continueConnected,
+                          onChanged: (bool? newValue) {
+                            setState(() {
+                              this.continueConnected = newValue!;
+                            });
+                          },
+                          checkColor: Colors.white,
+                          focusColor: Colors.white,
+                        ),
+                        Text(
+                          "Continuar conectado",
+                          style: TextStyle(color: Colors.white),
+                        )
+                      ],
+                    ),
+                    Padding(padding: EdgeInsets.only(bottom: 10)),
+                    ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => PrivacyScreen(),
+                          ),
+                        );
+                      },
+                      child: Text(
+                        "Entrar",
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
+                      ),
+                      style: ElevatedButton.styleFrom(
+                        padding:
+                            EdgeInsets.symmetric(horizontal: 120, vertical: 20),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(50),
+                        ),
+                      ),
                     ),
                   ],
                 ),

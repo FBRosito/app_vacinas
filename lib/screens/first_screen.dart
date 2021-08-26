@@ -43,7 +43,20 @@ class _FirstScreenState extends State<FirstScreen> {
               ),
               child: Image.asset(
                 "assets/iconeVacina.png",
-                height: 125,
+                height: 150,
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.only(
+                bottom: 15,
+              ),
+              child: Text(
+                "Sala de Vacinas",
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold),
               ),
             ),
             ElevatedButton(
@@ -52,8 +65,13 @@ class _FirstScreenState extends State<FirstScreen> {
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: Colors.white,
-                    fontSize: 24,
+                    fontSize: 30,
                     fontWeight: FontWeight.bold,
+                  ),
+                ),
+                style: ElevatedButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(50),
                   ),
                 ),
                 onPressed: () {
