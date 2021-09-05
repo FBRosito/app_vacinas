@@ -1,15 +1,51 @@
+import 'package:app_vacinas/screens/termos_compromisso.dart';
 import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 
 class PrivacyScreen extends StatefulWidget {
-  const PrivacyScreen({Key? key}) : super(key: key);
-
   @override
-  _PrivacyScreenState createState() => _PrivacyScreenState();
+  State<StatefulWidget> createState() {
+    return _PrivacyScreenState();
+  }
 }
 
 class _PrivacyScreenState extends State<PrivacyScreen> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return SafeArea(
+      child: Scaffold(
+        appBar: AppBar(
+          title: Text(
+            "Política de Privacidade",
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              fontSize: 24,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          backgroundColor: Colors.blue,
+        ),
+        body: SfPdfViewer.asset(
+          'teste.pdf',
+        ),
+        bottomNavigationBar: ElevatedButton(
+          child: Text(
+            "Aceitar",
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              color: Colors.white,
+            ),
+          ),
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => TermosCompromissoScreen(),
+              ),
+            );
+          },
+        ),
+      ),
+    );
   }
 }
