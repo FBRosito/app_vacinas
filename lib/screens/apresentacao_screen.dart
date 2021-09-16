@@ -3,21 +3,21 @@ import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 
 import 'menu_screen.dart';
 
-class TermosCompromissoScreen extends StatefulWidget {
+class ApresentacaoScreen extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return _TermosCompromissoScreenState();
+    return _ApresentacaoScreenState();
   }
 }
 
-class _TermosCompromissoScreenState extends State<TermosCompromissoScreen> {
+class _ApresentacaoScreenState extends State<ApresentacaoScreen> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
           title: Text(
-            "Termos de Compromisso",
+            "Apresentação",
             textAlign: TextAlign.center,
             style: TextStyle(
               fontSize: 24,
@@ -31,7 +31,7 @@ class _TermosCompromissoScreenState extends State<TermosCompromissoScreen> {
         ),
         bottomNavigationBar: ElevatedButton(
           child: Text(
-            "Aceitar",
+            "Voltar",
             style: TextStyle(
               fontWeight: FontWeight.bold,
               color: Colors.white,

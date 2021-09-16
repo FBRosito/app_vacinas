@@ -18,6 +18,12 @@ class _LoginScreenState extends State<LoginScreen> {
     247,
     255,
   );
+  Color linhasColor = Color.fromARGB(
+    255,
+    103,
+    163,
+    255,
+  );
 
   bool continueConnected = false;
   String dropdownValue = 'Selecione sua ocupação';
@@ -67,6 +73,10 @@ class _LoginScreenState extends State<LoginScreen> {
                 child: Column(
                   children: [
                     TextFormField(
+                      cursorColor: Colors.white,
+                      style: TextStyle(
+                        color: Colors.white,
+                      ),
                       autofocus: true,
                       decoration: InputDecoration(
                         labelText: "E-mail",
@@ -100,7 +110,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       style: const TextStyle(color: Colors.white),
                       underline: Container(
                         height: 2,
-                        color: Colors.black12,
+                        color: linhasColor,
                       ),
                       onChanged: (String? newValue) {
                         setState(() {
@@ -122,6 +132,10 @@ class _LoginScreenState extends State<LoginScreen> {
                       }).toList(),
                     ),
                     TextFormField(
+                      cursorColor: Colors.white,
+                      style: TextStyle(
+                        color: Colors.white,
+                      ),
                       decoration: InputDecoration(
                         labelText: "Estado",
                         labelStyle: TextStyle(
@@ -141,6 +155,10 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                     Padding(padding: EdgeInsets.only(bottom: 10)),
                     TextFormField(
+                      cursorColor: Colors.white,
+                      style: TextStyle(
+                        color: Colors.white,
+                      ),
                       decoration: InputDecoration(
                         labelText: "Cidade",
                         labelStyle: TextStyle(

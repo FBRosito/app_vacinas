@@ -3,21 +3,21 @@ import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 
 import 'menu_screen.dart';
 
-class TermosCompromissoScreen extends StatefulWidget {
+class CalendariosScreen extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return _TermosCompromissoScreenState();
+    return _CalendariosScreenState();
   }
 }
 
-class _TermosCompromissoScreenState extends State<TermosCompromissoScreen> {
+class _CalendariosScreenState extends State<CalendariosScreen> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
           title: Text(
-            "Termos de Compromisso",
+            "Calendários Vacinais",
             textAlign: TextAlign.center,
             style: TextStyle(
               fontSize: 24,
@@ -31,7 +31,7 @@ class _TermosCompromissoScreenState extends State<TermosCompromissoScreen> {
         ),
         bottomNavigationBar: ElevatedButton(
           child: Text(
-            "Aceitar",
+            "Voltar",
             style: TextStyle(
               fontWeight: FontWeight.bold,
               color: Colors.white,
