@@ -26,25 +26,29 @@ class _AtrasoVacinalScreenState extends State<AtrasoVacinalScreen> {
           ),
           backgroundColor: Colors.blue,
         ),
-        body: SfPdfViewer.asset(
-          'teste.pdf',
+        body: SfPdfViewer.network(
+          'https://docs.google.com/document/d/1zU_0InBaHrVyJLOEl2T7IfUQqe7xX_T-/export?format=pdf&ouid=103452109716217312813&rtpof=true&sd=true',
         ),
-        bottomNavigationBar: ElevatedButton(
-          child: Text(
-            "Voltar",
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-              color: Colors.white,
-            ),
-          ),
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => MenuScreen(),
+        bottomNavigationBar: FractionallySizedBox(
+          heightFactor: 0.06,
+          widthFactor: 1,
+          child: ElevatedButton(
+            child: Text(
+              "Voltar",
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
               ),
-            );
-          },
+            ),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => MenuScreen(),
+                ),
+              );
+            },
+          ),
         ),
       ),
     );

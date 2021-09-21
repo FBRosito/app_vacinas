@@ -1,23 +1,22 @@
+import 'package:app_vacinas/screens/imunobiologicos_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 
-import 'menu_screen.dart';
-
-class TermosCompromissoScreen extends StatefulWidget {
+class HepBScreen extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return _TermosCompromissoScreenState();
+    return _HepBScreenState();
   }
 }
 
-class _TermosCompromissoScreenState extends State<TermosCompromissoScreen> {
+class _HepBScreenState extends State<HepBScreen> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
           title: Text(
-            "Termos de Compromisso",
+            "Hepatite B",
             textAlign: TextAlign.center,
             style: TextStyle(
               fontSize: 24,
@@ -26,15 +25,15 @@ class _TermosCompromissoScreenState extends State<TermosCompromissoScreen> {
           ),
           backgroundColor: Colors.blue,
         ),
-        body: SfPdfViewer.asset(
-          'teste.pdf',
+        body: SfPdfViewer.network(
+          'https://docs.google.com/document/d/1qlbdE5gMjXf7BeaGzO9qEjaCk35z8BlM/export?format=pdf&ouid=103452109716217312813&rtpof=true&sd=true',
         ),
         bottomNavigationBar: FractionallySizedBox(
           heightFactor: 0.06,
           widthFactor: 1,
           child: ElevatedButton(
             child: Text(
-              "Aceitar",
+              "Voltar",
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 color: Colors.white,
@@ -44,7 +43,7 @@ class _TermosCompromissoScreenState extends State<TermosCompromissoScreen> {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => MenuScreen(),
+                  builder: (context) => ImunobiologicosScreen(),
                 ),
               );
             },

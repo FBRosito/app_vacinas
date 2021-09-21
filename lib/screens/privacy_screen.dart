@@ -28,22 +28,26 @@ class _PrivacyScreenState extends State<PrivacyScreen> {
         body: SfPdfViewer.asset(
           'teste.pdf',
         ),
-        bottomNavigationBar: ElevatedButton(
-          child: Text(
-            "Aceitar",
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-              color: Colors.white,
-            ),
-          ),
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => TermosCompromissoScreen(),
+        bottomNavigationBar: FractionallySizedBox(
+          heightFactor: 0.06,
+          widthFactor: 1,
+          child: ElevatedButton(
+            child: Text(
+              "Aceitar",
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
               ),
-            );
-          },
+            ),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => TermosCompromissoScreen(),
+                ),
+              );
+            },
+          ),
         ),
       ),
     );

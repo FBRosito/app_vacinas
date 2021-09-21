@@ -143,7 +143,7 @@ class _MenuScreenState extends State<MenuScreen> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => CalendariosScreen(),
+                            builder: (context) => CalendariosVacinaisScreen(),
                           ),
                         );
                       },
