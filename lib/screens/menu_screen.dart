@@ -1,13 +1,7 @@
 import 'dart:ui';
-
-import 'package:app_vacinas/screens/apresentacao_screen.dart';
-import 'package:app_vacinas/screens/recomendacoes_gerais_screen.dart';
 import 'package:flutter/material.dart';
-
-import 'atraso_vacinal_screen.dart';
-import 'calendarios_vacinais_screen.dart';
-import 'eapv_screen.dart';
-import 'imunobiologicos_screen.dart';
+import 'casos_clinicos_screen.dart';
+import 'others_screen.dart';
 
 class MenuScreen extends StatefulWidget {
   const MenuScreen({Key? key}) : super(key: key);
@@ -65,28 +59,30 @@ class _MenuScreenState extends State<MenuScreen> {
               Padding(padding: EdgeInsets.only(bottom: 40)),
               Form(
                 child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
+                    Padding(
+                      padding: EdgeInsets.only(
+                        bottom: 15,
+                      ),
+                    ),
                     ElevatedButton(
                       onPressed: () {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => ApresentacaoScreen(),
+                            builder: (context) => OthersScreen(),
                           ),
                         );
                       },
                       child: Text(
-                        "Apresentação",
+                        "PDF - Guia de Vacinas",
                         style: TextStyle(
                           color: Colors.white,
                         ),
                       ),
                       style: ElevatedButton.styleFrom(
-                        padding:
-                            EdgeInsets.symmetric(horizontal: 130, vertical: 20),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(50),
-                        ),
+                        fixedSize: Size(240, 80),
                       ),
                     ),
                     Padding(padding: EdgeInsets.only(bottom: 15)),
@@ -95,118 +91,18 @@ class _MenuScreenState extends State<MenuScreen> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => RecomendacoesScreen(),
+                            builder: (context) => CasosClinicosScreen(),
                           ),
                         );
                       },
                       child: Text(
-                        "Recomendações gerais",
+                        "Casos Clínicos",
                         style: TextStyle(
                           color: Colors.white,
                         ),
                       ),
                       style: ElevatedButton.styleFrom(
-                        padding:
-                            EdgeInsets.symmetric(horizontal: 100, vertical: 20),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(50),
-                        ),
-                      ),
-                    ),
-                    Padding(padding: EdgeInsets.only(bottom: 15)),
-                    ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => ImunobiologicosScreen(),
-                          ),
-                        );
-                      },
-                      child: Text(
-                        "Imunobiológicos",
-                        style: TextStyle(
-                          color: Colors.white,
-                        ),
-                      ),
-                      style: ElevatedButton.styleFrom(
-                        padding:
-                            EdgeInsets.symmetric(horizontal: 120, vertical: 20),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(50),
-                        ),
-                      ),
-                    ),
-                    Padding(padding: EdgeInsets.only(bottom: 15)),
-                    ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => CalendariosVacinaisScreen(),
-                          ),
-                        );
-                      },
-                      child: Text(
-                        "Calendários vacinais",
-                        style: TextStyle(
-                          color: Colors.white,
-                        ),
-                      ),
-                      style: ElevatedButton.styleFrom(
-                        padding:
-                            EdgeInsets.symmetric(horizontal: 107, vertical: 20),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(50),
-                        ),
-                      ),
-                    ),
-                    Padding(padding: EdgeInsets.only(bottom: 15)),
-                    ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => EapvScreen(),
-                          ),
-                        );
-                      },
-                      child: Text(
-                        "Eventos Adversos Pós Vacinais - EAPV",
-                        style: TextStyle(
-                          color: Colors.white,
-                        ),
-                      ),
-                      style: ElevatedButton.styleFrom(
-                        padding:
-                            EdgeInsets.symmetric(horizontal: 52, vertical: 20),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(50),
-                        ),
-                      ),
-                    ),
-                    Padding(padding: EdgeInsets.only(bottom: 15)),
-                    ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => AtrasoVacinalScreen(),
-                          ),
-                        );
-                      },
-                      child: Text(
-                        "Atraso Vacinal",
-                        style: TextStyle(
-                          color: Colors.white,
-                        ),
-                      ),
-                      style: ElevatedButton.styleFrom(
-                        padding:
-                            EdgeInsets.symmetric(horizontal: 127, vertical: 20),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(50),
-                        ),
+                        fixedSize: Size(240, 80),
                       ),
                     ),
                   ],

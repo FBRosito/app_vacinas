@@ -26,7 +26,7 @@ class _PrivacyScreenState extends State<PrivacyScreen> {
           backgroundColor: Colors.blue,
         ),
         body: SfPdfViewer.asset(
-          'teste.pdf',
+          'privacy_policy.pdf',
         ),
         bottomNavigationBar: FractionallySizedBox(
           heightFactor: 0.06,
