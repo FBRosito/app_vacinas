@@ -27,7 +27,7 @@ class _TermosCompromissoScreenState extends State<TermosCompromissoScreen> {
           backgroundColor: Colors.blue,
         ),
         body: SfPdfViewer.asset(
-          'teste.pdf',
+          'Termos de Compromisso.pdf',
         ),
         bottomNavigationBar: FractionallySizedBox(
           heightFactor: 0.06,
