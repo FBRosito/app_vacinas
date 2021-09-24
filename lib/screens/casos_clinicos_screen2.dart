@@ -14,22 +14,126 @@ class _CasosClinicosScreen2State extends State<CasosClinicosScreen2> {
         context: context,
         builder: (context) {
           return AlertDialog(
-            title: Text("Resposta"),
-            content: ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => MenuScreen(),
+            title: Text("Conclusões Finais"),
+            content: Column(
+              children: [
+                ListTile(
+                  title: Text(
+                    "Sempre verificar as contraindicações de cada imunobiológico",
                   ),
-                );
-              },
-              child: Text(
-                "Voltar",
-                style: TextStyle(
-                  color: Colors.white,
+                  leading: Icon(
+                    Icons.warning,
+                    color: Colors.yellow[600],
+                    size: 30.0,
+                  ),
                 ),
-              ),
+                ListTile(
+                  title: Text(
+                    "Realizar a dose 1 da Vacina Pentavalente (DTP+Hib+Hep B)",
+                  ),
+                  leading: Icon(
+                    Icons.dangerous_outlined,
+                    color: Colors.green,
+                    size: 30.0,
+                  ),
+                ),
+                ListTile(
+                  title: Text(
+                    "Aprazar a dose 2 da Vacina Pentavalente (DTP+Hib+Hep B) para 2 meses",
+                  ),
+                  leading: Icon(
+                    Icons.dangerous_outlined,
+                    color: Colors.orange,
+                    size: 30.0,
+                  ),
+                ),
+                ListTile(
+                  title: Text(
+                    "Realizar a dose 1 da Vacina Poliomelite Inativada (VIP)",
+                  ),
+                  leading: Icon(
+                    Icons.dangerous_outlined,
+                    color: Colors.green,
+                    size: 30.0,
+                  ),
+                ),
+                ListTile(
+                  title: Text(
+                    "Aprazar a dose 2 da Vacina Poliomelite Inativada (VIP) para 2 meses",
+                  ),
+                  leading: Icon(
+                    Icons.dangerous_outlined,
+                    color: Colors.orange,
+                    size: 30.0,
+                  ),
+                ),
+                ListTile(
+                  title: Text(
+                    "Realizar a dose 1 da Vacina Pneumocócica 10",
+                  ),
+                  leading: Icon(
+                    Icons.dangerous_outlined,
+                    color: Colors.green,
+                    size: 30.0,
+                  ),
+                ),
+                ListTile(
+                  title: Text(
+                    "Aprazar a dose 2 da Vacina Pneumocócica 10 para 2 meses",
+                  ),
+                  leading: Icon(
+                    Icons.dangerous_outlined,
+                    color: Colors.orange,
+                    size: 30.0,
+                  ),
+                ),
+                ListTile(
+                  title: Text(
+                    "Realizar a dose 1 da Vacina Meningogócica C",
+                  ),
+                  leading: Icon(
+                    Icons.dangerous_outlined,
+                    color: Colors.green,
+                    size: 30.0,
+                  ),
+                ),
+                ListTile(
+                  title: Text(
+                    "Aprazar a dose 2 da Vacina Meningogócica C para 2 meses",
+                  ),
+                  leading: Icon(
+                    Icons.dangerous_outlined,
+                    color: Colors.orange,
+                    size: 30.0,
+                  ),
+                ),
+                ListTile(
+                  title: Text(
+                    "Vacina Rotavírus Humano Oral contraindicada  para a faixa etária",
+                  ),
+                  leading: Icon(
+                    Icons.dangerous_outlined,
+                    color: Colors.red,
+                    size: 30.0,
+                  ),
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => MenuScreen(),
+                      ),
+                    );
+                  },
+                  child: Text(
+                    "Voltar",
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+              ],
             ),
           );
         });

@@ -17,7 +17,7 @@ class _TermosCompromissoScreenState extends State<TermosCompromissoScreen> {
       child: Scaffold(
         appBar: AppBar(
           title: Text(
-            "Termos de Compromisso",
+            "Termos de Uso",
             textAlign: TextAlign.center,
             style: TextStyle(
               fontSize: 24,
@@ -27,7 +27,7 @@ class _TermosCompromissoScreenState extends State<TermosCompromissoScreen> {
           backgroundColor: Colors.blue,
         ),
         body: SfPdfViewer.asset(
-          'Termos de Compromisso.pdf',
+          'termos_compromisso.pdf',
         ),
         bottomNavigationBar: FractionallySizedBox(
           heightFactor: 0.06,

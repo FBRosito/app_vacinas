@@ -12,10 +12,14 @@ class _OthersScreenState extends State<OthersScreen> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Scaffold(
-        body: RotatedBox(
-          quarterTurns: 1,
-          child: SfPdfViewer.asset(
+      child: RotatedBox(
+        quarterTurns: 1,
+        child: Scaffold(
+          appBar: AppBar(
+            title: Text("Guia de Vacinas"),
+            backgroundColor: Colors.blue,
+          ),
+          body: SfPdfViewer.asset(
             'guia_vacinas_product.pdf',
             canShowPaginationDialog: true,
             canShowScrollHead: true,

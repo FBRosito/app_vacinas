@@ -32,7 +32,7 @@ class _CasosClinicosScreenState extends State<CasosClinicosScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Vacinas já tomadas:"),
+        title: Text("Vacinas já realizadas:"),
         backgroundColor: Colors.blue,
       ),
       body: Container(

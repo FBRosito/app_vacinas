@@ -11,32 +11,15 @@ class MenuScreen extends StatefulWidget {
 }
 
 class _MenuScreenState extends State<MenuScreen> {
-  Color topColor = Colors.blue;
-  Color bottomColor = Color.fromARGB(
-    255,
-    212,
-    247,
-    255,
-  );
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
+        color: Colors.blue[400],
         height: MediaQuery.of(context).size.height,
         padding: EdgeInsets.symmetric(
           horizontal: 50,
           vertical: 50,
-        ),
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: [
-              topColor,
-              bottomColor,
-            ],
-          ),
         ),
         child: SingleChildScrollView(
           child: Column(
@@ -76,7 +59,7 @@ class _MenuScreenState extends State<MenuScreen> {
                         );
                       },
                       child: Text(
-                        "PDF - Guia de Vacinas",
+                        "Guia de Vacinas",
                         style: TextStyle(
                           color: Colors.white,
                         ),

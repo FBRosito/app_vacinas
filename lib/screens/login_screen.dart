@@ -11,20 +11,6 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  Color topColor = Colors.blue;
-  Color bottomColor = Color.fromARGB(
-    255,
-    212,
-    247,
-    255,
-  );
-  Color linhasColor = Color.fromARGB(
-    255,
-    103,
-    163,
-    255,
-  );
-
   bool continueConnected = false;
   String dropdownValue = 'Selecione sua ocupação';
 
@@ -37,16 +23,7 @@ class _LoginScreenState extends State<LoginScreen> {
           horizontal: 50,
           vertical: 50,
         ),
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: [
-              topColor,
-              bottomColor,
-            ],
-          ),
-        ),
+        color: Colors.blue[400],
         child: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -95,42 +72,6 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                       ),
                     ),
-                    Padding(padding: EdgeInsets.only(bottom: 10)),
-                    DropdownButton<String>(
-                      focusColor: Colors.blue[600],
-                      isExpanded: true,
-                      dropdownColor: Colors.blue[300],
-                      value: dropdownValue,
-                      icon: const Icon(
-                        Icons.arrow_downward,
-                        color: Colors.white,
-                      ),
-                      iconSize: 24,
-                      elevation: 16,
-                      style: const TextStyle(color: Colors.white),
-                      underline: Container(
-                        height: 2,
-                        color: linhasColor,
-                      ),
-                      onChanged: (String? newValue) {
-                        setState(() {
-                          dropdownValue = newValue!;
-                        });
-                      },
-                      items: <String>[
-                        'Selecione sua ocupação',
-                        'Enfermeiro',
-                        'Técnico de Enfermagem',
-                        'Auxiliar de Enfermagem',
-                        'Estudante de Enfermagem',
-                        'Outros Profissionais',
-                      ].map<DropdownMenuItem<String>>((String value) {
-                        return DropdownMenuItem<String>(
-                          value: value,
-                          child: Text(value),
-                        );
-                      }).toList(),
-                    ),
                     TextFormField(
                       cursorColor: Colors.white,
                       style: TextStyle(
@@ -160,6 +101,9 @@ class _LoginScreenState extends State<LoginScreen> {
                         color: Colors.white,
                       ),
                       decoration: InputDecoration(
+                        hintStyle: TextStyle(
+                          color: Colors.white,
+                        ),
                         labelText: "Cidade",
                         labelStyle: TextStyle(
                           color: Colors.white,
@@ -175,6 +119,42 @@ class _LoginScreenState extends State<LoginScreen> {
                           borderSide: BorderSide(color: Colors.white),
                         ),
                       ),
+                    ),
+                    Padding(padding: EdgeInsets.only(bottom: 10)),
+                    DropdownButton<String>(
+                      isExpanded: true,
+                      dropdownColor: Colors.grey,
+                      value: dropdownValue,
+                      icon: const Icon(
+                        Icons.arrow_downward,
+                        color: Colors.white,
+                      ),
+                      iconSize: 24,
+                      elevation: 16,
+                      style: const TextStyle(color: Colors.white),
+                      underline: Container(
+                        padding: EdgeInsets.only(top: 10),
+                        height: 2,
+                        color: Colors.white,
+                      ),
+                      onChanged: (String? newValue) {
+                        setState(() {
+                          dropdownValue = newValue!;
+                        });
+                      },
+                      items: <String>[
+                        'Selecione sua ocupação',
+                        'Enfermeiro',
+                        'Técnico de Enfermagem',
+                        'Auxiliar de Enfermagem',
+                        'Estudante de Enfermagem',
+                        'Outros Profissionais',
+                      ].map<DropdownMenuItem<String>>((String value) {
+                        return DropdownMenuItem<String>(
+                          value: value,
+                          child: Text(value),
+                        );
+                      }).toList(),
                     ),
                     Padding(padding: EdgeInsets.only(bottom: 10)),
                     Row(
@@ -217,6 +197,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(50),
                         ),
+                        primary: Colors.blue[600],
                       ),
                     ),
                   ],
