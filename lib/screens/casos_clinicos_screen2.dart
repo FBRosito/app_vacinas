@@ -1,3 +1,4 @@
+import 'package:app_vacinas/screens/imunobiologicos_screen.dart';
 import 'package:app_vacinas/screens/menu_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
@@ -190,7 +191,7 @@ class _CasosClinicosScreen2State extends State<CasosClinicosScreen2> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => MenuScreen(),
+                        builder: (context) => ImunoScreen(),
                       ),
                     );
                   },

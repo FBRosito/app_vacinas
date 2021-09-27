@@ -1,3 +1,4 @@
+import 'package:app_vacinas/screens/calendariosVacinaisScreen/calendario_crianca_screen.dart';
 import 'package:app_vacinas/screens/menu_screen.dart';
 import 'package:app_vacinas/screens/vacinasScreen/hepatite_b_screen.dart';
 import 'package:flutter/material.dart';
@@ -28,7 +29,7 @@ class _CalendariosVacinaisScreenState extends State<CalendariosVacinaisScreen> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => HepatiteBScreen(),
+                    builder: (context) => CalendarioCriancaScreen(),
                   ),
                 );
               },
