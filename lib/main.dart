@@ -1,4 +1,3 @@
-import 'package:app_vacinas/screens/menu_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:app_vacinas/screens/first_screen.dart';
 
@@ -11,7 +10,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'App Vacinas',
-      home: MenuScreen(),
+      home: FirstScreen(),
     );
   }
 }

@@ -1,6 +1,5 @@
 import 'package:app_vacinas/screens/casos_clinicos_screen2.dart';
 import 'package:flutter/material.dart';
-import 'dart:async';
 
 import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 
@@ -82,7 +81,17 @@ class _CasosClinicosScreen1State extends State<CasosClinicosScreen1> {
             Padding(padding: EdgeInsets.only(bottom: 20)),
             Padding(
               padding: EdgeInsets.only(left: 100, right: 100),
-              child: TextField(inputFormatters: [maskFormatter]),
+              child: TextField(
+                inputFormatters: [maskFormatter],
+                decoration: InputDecoration(
+                  enabledBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(color: Colors.black),
+                  ),
+                  focusedBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(color: Colors.black),
+                  ),
+                ),
+              ),
             ),
             Padding(padding: EdgeInsets.only(bottom: 375)),
             Padding(

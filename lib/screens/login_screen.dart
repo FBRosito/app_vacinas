@@ -56,6 +56,14 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                       autofocus: true,
                       decoration: InputDecoration(
+                        enabledBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Colors.white,
+                          ),
+                        ),
+                        focusedBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(color: Colors.white),
+                        ),
                         labelText: "E-mail",
                         labelStyle: TextStyle(
                           color: Colors.white,
@@ -67,9 +75,6 @@ class _LoginScreenState extends State<LoginScreen> {
                         border: UnderlineInputBorder(
                           borderSide: BorderSide(color: Colors.white),
                         ),
-                        focusedBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(color: Colors.white),
-                        ),
                       ),
                     ),
                     TextFormField(
@@ -78,6 +83,14 @@ class _LoginScreenState extends State<LoginScreen> {
                         color: Colors.white,
                       ),
                       decoration: InputDecoration(
+                        enabledBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Colors.white,
+                          ),
+                        ),
+                        focusedBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(color: Colors.white),
+                        ),
                         labelText: "Estado",
                         labelStyle: TextStyle(
                           color: Colors.white,
@@ -89,9 +102,6 @@ class _LoginScreenState extends State<LoginScreen> {
                         border: UnderlineInputBorder(
                           borderSide: BorderSide(color: Colors.white),
                         ),
-                        focusedBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(color: Colors.white),
-                        ),
                       ),
                     ),
                     Padding(padding: EdgeInsets.only(bottom: 10)),
@@ -101,6 +111,14 @@ class _LoginScreenState extends State<LoginScreen> {
                         color: Colors.white,
                       ),
                       decoration: InputDecoration(
+                        enabledBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Colors.white,
+                          ),
+                        ),
+                        focusedBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(color: Colors.white),
+                        ),
                         hintStyle: TextStyle(
                           color: Colors.white,
                         ),
@@ -113,9 +131,6 @@ class _LoginScreenState extends State<LoginScreen> {
                           color: Colors.white,
                         ),
                         border: UnderlineInputBorder(
-                          borderSide: BorderSide(color: Colors.white),
-                        ),
-                        focusedBorder: UnderlineInputBorder(
                           borderSide: BorderSide(color: Colors.white),
                         ),
                       ),
@@ -159,20 +174,24 @@ class _LoginScreenState extends State<LoginScreen> {
                     Padding(padding: EdgeInsets.only(bottom: 10)),
                     Row(
                       children: [
-                        Checkbox(
-                          value: this.continueConnected,
-                          onChanged: (bool? newValue) {
-                            setState(() {
-                              this.continueConnected = newValue!;
-                            });
-                          },
-                          checkColor: Colors.white,
-                          focusColor: Colors.white,
+                        Theme(
+                          data: Theme.of(context).copyWith(
+                            unselectedWidgetColor: Colors.white,
+                          ),
+                          child: Checkbox(
+                            value: this.continueConnected,
+                            onChanged: (bool? newValue) {
+                              setState(() {
+                                this.continueConnected = newValue!;
+                              });
+                            },
+                            checkColor: Colors.white,
+                          ),
                         ),
                         Text(
                           "Continuar conectado",
                           style: TextStyle(color: Colors.white),
-                        )
+                        ),
                       ],
                     ),
                     Padding(padding: EdgeInsets.only(bottom: 10)),

@@ -1,5 +1,7 @@
 import 'package:app_vacinas/screens/vacinasScreen/hepatite_b_screen.dart';
 import 'package:flutter/material.dart';
+import 'eapvScreens/hepatite_b_eapv_screen.dart';
+import 'menu_screen.dart';
 
 class EapvScreen extends StatefulWidget {
   @override
@@ -27,7 +29,7 @@ class _EapvScreenState extends State<EapvScreen> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => HepatiteBScreen(),
+                    builder: (context) => HepatiteBEapvScreen(),
                   ),
                 );
               },
@@ -332,6 +334,27 @@ class _EapvScreenState extends State<EapvScreen> {
               },
             ),
           ],
+        ),
+        bottomNavigationBar: FractionallySizedBox(
+          heightFactor: 0.06,
+          widthFactor: 1,
+          child: ElevatedButton(
+            child: Text(
+              "Voltar",
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
+            ),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => MenuScreen(),
+                ),
+              );
+            },
+          ),
         ),
       ),
     );

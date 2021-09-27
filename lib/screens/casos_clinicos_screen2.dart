@@ -65,7 +65,7 @@ class _CasosClinicosScreen2State extends State<CasosClinicosScreen2> {
                     createAlertDialog2(context);
                   },
                   child: Text(
-                    "Concluir Simulação",
+                    "Concluir Simulação do Caso Clínico - Conduta indicada",
                     style: TextStyle(
                       color: Colors.white,
                     ),
@@ -82,7 +82,7 @@ class _CasosClinicosScreen2State extends State<CasosClinicosScreen2> {
         context: context,
         builder: (context) {
           return AlertDialog(
-            title: Text("Simulação do caso Clínico - Conduta indicada"),
+            title: Text("Simulação do Caso Clínico - Conduta indicada"),
             content: Column(
               children: [
                 ListTile(

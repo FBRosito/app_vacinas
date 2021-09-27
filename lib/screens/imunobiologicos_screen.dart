@@ -1,6 +1,8 @@
 import 'package:app_vacinas/screens/vacinasScreen/hepatite_b_screen.dart';
 import 'package:flutter/material.dart';
 
+import 'menu_screen.dart';
+
 class ImunoScreen extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
@@ -332,6 +334,27 @@ class _ImunoScreenState extends State<ImunoScreen> {
               },
             ),
           ],
+        ),
+        bottomNavigationBar: FractionallySizedBox(
+          heightFactor: 0.06,
+          widthFactor: 1,
+          child: ElevatedButton(
+            child: Text(
+              "Voltar",
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
+            ),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => MenuScreen(),
+                ),
+              );
+            },
+          ),
         ),
       ),
     );

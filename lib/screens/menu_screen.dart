@@ -1,9 +1,12 @@
 import 'dart:ui';
+import 'package:app_vacinas/screens/apresentacao_screen.dart';
+import 'package:app_vacinas/screens/calendarios_vacinais_screen.dart';
 import 'package:app_vacinas/screens/casos_clinicos_screen1.dart';
+import 'package:app_vacinas/screens/recomendacoes_gerais_screen.dart';
+import 'package:app_vacinas/screens/referencias_creditos_screen.dart';
 import 'package:flutter/material.dart';
 import 'eapv_screen.dart';
 import 'imunobiologicos_screen.dart';
-import 'others_screen.dart';
 
 class MenuScreen extends StatefulWidget {
   const MenuScreen({Key? key}) : super(key: key);
@@ -56,7 +59,7 @@ class _MenuScreenState extends State<MenuScreen> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => OthersScreen(),
+                            builder: (context) => ApresentacaoScreen(),
                           ),
                         );
                       },
@@ -76,7 +79,7 @@ class _MenuScreenState extends State<MenuScreen> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => CasosClinicosScreen1(),
+                            builder: (context) => RecomendacoesGeraisScreen(),
                           ),
                         );
                       },
@@ -116,7 +119,7 @@ class _MenuScreenState extends State<MenuScreen> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => ImunoScreen(),
+                            builder: (context) => CalendariosVacinaisScreen(),
                           ),
                         );
                       },
@@ -176,7 +179,7 @@ class _MenuScreenState extends State<MenuScreen> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => CasosClinicosScreen1(),
+                            builder: (context) => ReferenciasCreditosScreen(),
                           ),
                         );
                       },
