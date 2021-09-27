@@ -25,7 +25,7 @@ class _FirstScreenState extends State<FirstScreen> {
                 bottom: 15,
               ),
               child: Image.asset(
-                "assets/iconeVacina.png",
+                "assets/iconePrimeiraPagina.png",
                 height: 150,
               ),
             ),
