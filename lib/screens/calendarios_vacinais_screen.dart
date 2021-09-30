@@ -75,7 +75,7 @@ class _CalendariosVacinaisScreenState extends State<CalendariosVacinaisScreen> {
             ),
             ListTile(
               leading: Icon(Icons.health_and_safety_outlined),
-              title: Text('Calendário da Idoso'),
+              title: Text('Calendário do Idoso'),
               subtitle: Text('Clique para acessar o calendário do idoso'),
               onTap: () {
                 Navigator.push(
