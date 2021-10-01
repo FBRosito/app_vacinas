@@ -38,7 +38,7 @@ class _CasosClinicosScreen2State extends State<CasosClinicosScreen2> {
         context: context,
         builder: (context) {
           return AlertDialog(
-            title: Text("Conclusões Finais"),
+            title: Text("Data das Vacinas Realizadas"),
             content: Column(
               children: [
                 Text(
