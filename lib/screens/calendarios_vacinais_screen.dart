@@ -23,7 +23,7 @@ class _CalendariosVacinaisScreenState extends State<CalendariosVacinaisScreen> {
           children: [
             ListTile(
               leading: Icon(Icons.health_and_safety_outlined),
-              title: Text('Calendário da Criança'),
+              title: Text('Calendário Criança'),
               subtitle: Text('Clique para acessar o calendário da criança'),
               onTap: () {
                 Navigator.push(
@@ -36,7 +36,7 @@ class _CalendariosVacinaisScreenState extends State<CalendariosVacinaisScreen> {
             ),
             ListTile(
               leading: Icon(Icons.health_and_safety_outlined),
-              title: Text('Calendário do Adolescente'),
+              title: Text('Calendário Adolescente'),
               subtitle: Text('Clique para acessar o calendário do adolescente'),
               onTap: () {
                 Navigator.push(
@@ -49,7 +49,7 @@ class _CalendariosVacinaisScreenState extends State<CalendariosVacinaisScreen> {
             ),
             ListTile(
               leading: Icon(Icons.health_and_safety_outlined),
-              title: Text('Calendário do Adulto'),
+              title: Text('Calendário Adulto'),
               subtitle: Text('Clique para acessar o calendário do adulto'),
               onTap: () {
                 Navigator.push(
@@ -62,7 +62,7 @@ class _CalendariosVacinaisScreenState extends State<CalendariosVacinaisScreen> {
             ),
             ListTile(
               leading: Icon(Icons.health_and_safety_outlined),
-              title: Text('Calendário da Gestante'),
+              title: Text('Calendário Gestante'),
               subtitle: Text('Clique para acessar o calendário da gestante'),
               onTap: () {
                 Navigator.push(
@@ -75,13 +75,52 @@ class _CalendariosVacinaisScreenState extends State<CalendariosVacinaisScreen> {
             ),
             ListTile(
               leading: Icon(Icons.health_and_safety_outlined),
-              title: Text('Calendário do Idoso'),
+              title: Text('Calendário Idoso'),
               subtitle: Text('Clique para acessar o calendário do idoso'),
               onTap: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
                     builder: (context) => HepatiteBScreen(),
+                  ),
+                );
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.health_and_safety_outlined),
+              title: Text('Calendário Indígena'),
+              subtitle: Text('Clique para acessar o calendário da criança'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => CalendarioCriancaScreen(),
+                  ),
+                );
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.health_and_safety_outlined),
+              title: Text('Calendário Criança Exposta HIV'),
+              subtitle: Text('Clique para acessar o calendário da criança'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => CalendarioCriancaScreen(),
+                  ),
+                );
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.health_and_safety_outlined),
+              title: Text('Calendário HIV'),
+              subtitle: Text('Clique para acessar o calendário da criança'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => CalendarioCriancaScreen(),
                   ),
                 );
               },
