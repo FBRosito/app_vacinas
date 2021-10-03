@@ -9,6 +9,9 @@ class HepatiteBScreen extends StatefulWidget {
 }
 
 class _HepatiteBScreenState extends State<HepatiteBScreen> {
+  Color topColor = Color.fromARGB(255, 42, 74, 117);
+  Color bottomColor = Color.fromARGB(255, 28, 218, 195);
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -17,7 +20,7 @@ class _HepatiteBScreenState extends State<HepatiteBScreen> {
         child: Scaffold(
           appBar: AppBar(
             title: const Text("Hepatite B"),
-            backgroundColor: Colors.blue,
+            backgroundColor: topColor,
           ),
           body: SfPdfViewer.asset(
             'hepatite_b.pdf',

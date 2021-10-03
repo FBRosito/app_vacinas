@@ -8,6 +8,8 @@ class FirstScreen extends StatefulWidget {
 }
 
 class _FirstScreenState extends State<FirstScreen> {
+  Color topColor = Color.fromARGB(255, 42, 74, 117);
+  Color bottomColor = Color.fromARGB(255, 28, 218, 195);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,7 +17,12 @@ class _FirstScreenState extends State<FirstScreen> {
         padding: EdgeInsets.symmetric(
           horizontal: 50,
         ),
-        color: Colors.blue[400],
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: [topColor, bottomColor]),
+        ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -25,7 +32,7 @@ class _FirstScreenState extends State<FirstScreen> {
                 bottom: 15,
               ),
               child: Image.asset(
-                "assets/iconePrimeiraPagina.png",
+                "assets/iconePrimeiraPagina2.png",
                 height: 150,
               ),
             ),
@@ -56,7 +63,7 @@ class _FirstScreenState extends State<FirstScreen> {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(50),
                   ),
-                  primary: Colors.blue[600],
+                  primary: topColor,
                 ),
                 onPressed: () {
                   Navigator.push(

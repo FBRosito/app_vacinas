@@ -13,6 +13,8 @@ class LoginScreen extends StatefulWidget {
 class _LoginScreenState extends State<LoginScreen> {
   bool continueConnected = false;
   String dropdownValue = 'Selecione sua ocupação';
+  Color topColor = Color.fromARGB(255, 42, 74, 117);
+  Color bottomColor = Color.fromARGB(255, 28, 218, 195);
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +25,12 @@ class _LoginScreenState extends State<LoginScreen> {
           horizontal: 50,
           vertical: 50,
         ),
-        color: Colors.blue[400],
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: [topColor, bottomColor]),
+        ),
         child: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -138,7 +145,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     Padding(padding: EdgeInsets.only(bottom: 10)),
                     DropdownButton<String>(
                       isExpanded: true,
-                      dropdownColor: Colors.grey,
+                      dropdownColor: topColor,
                       value: dropdownValue,
                       icon: const Icon(
                         Icons.arrow_downward,
@@ -179,6 +186,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             unselectedWidgetColor: Colors.white,
                           ),
                           child: Checkbox(
+                            activeColor: topColor,
                             value: this.continueConnected,
                             onChanged: (bool? newValue) {
                               setState(() {
@@ -216,7 +224,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(50),
                         ),
-                        primary: Colors.blue[600],
+                        primary: topColor,
                       ),
                     ),
                   ],

@@ -33,6 +33,9 @@ class _CasosClinicosScreen2State extends State<CasosClinicosScreen2> {
   var maskFormatter = new MaskTextInputFormatter(
       mask: '##/##/####', filter: {"#": RegExp(r'[0-8]')});
 
+  Color topColor = Color.fromARGB(255, 42, 74, 117);
+  Color bottomColor = Color.fromARGB(255, 28, 218, 195);
+
   createAlertDialog1(BuildContext context) {
     return showDialog(
         context: context,
@@ -62,6 +65,9 @@ class _CasosClinicosScreen2State extends State<CasosClinicosScreen2> {
                 TextField(inputFormatters: [maskFormatter]),
                 Padding(padding: EdgeInsets.only(bottom: 30)),
                 ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    primary: topColor,
+                  ),
                   onPressed: () {
                     createAlertDialog2(context);
                   },
@@ -197,6 +203,9 @@ class _CasosClinicosScreen2State extends State<CasosClinicosScreen2> {
                   },
                 ),
                 ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    primary: topColor,
+                  ),
                   onPressed: () {
                     Navigator.push(
                       context,
@@ -224,7 +233,7 @@ class _CasosClinicosScreen2State extends State<CasosClinicosScreen2> {
       appBar: AppBar(
         title: Text(
             "Clique nas vacinas que o usuário realizou e escreva a data: "),
-        backgroundColor: Colors.blue,
+        backgroundColor: topColor,
       ),
       body: Container(
         height: MediaQuery.of(context).size.height,
@@ -238,6 +247,7 @@ class _CasosClinicosScreen2State extends State<CasosClinicosScreen2> {
         child: new ListView(
           children: values.keys.map((String key) {
             return new CheckboxListTile(
+              activeColor: topColor,
               title: new Text(key),
               value: values[key],
               onChanged: (bool? value) {
@@ -254,6 +264,9 @@ class _CasosClinicosScreen2State extends State<CasosClinicosScreen2> {
         widthFactor: 0.5,
         alignment: AlignmentDirectional.bottomCenter,
         child: ElevatedButton(
+          style: ElevatedButton.styleFrom(
+            primary: topColor,
+          ),
           child: Text(
             "Data de realização das vacinas",
             style: TextStyle(

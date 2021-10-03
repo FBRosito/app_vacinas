@@ -11,6 +11,9 @@ class ReferenciasCreditosScreen extends StatefulWidget {
 }
 
 class _ReferenciasCreditosScreenState extends State<ReferenciasCreditosScreen> {
+  Color topColor = Color.fromARGB(255, 42, 74, 117);
+  Color bottomColor = Color.fromARGB(255, 28, 218, 195);
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -19,7 +22,7 @@ class _ReferenciasCreditosScreenState extends State<ReferenciasCreditosScreen> {
         child: Scaffold(
           appBar: AppBar(
             title: const Text("Referências e Créditos"),
-            backgroundColor: Colors.blue,
+            backgroundColor: topColor,
           ),
           body: SfPdfViewer.asset(
             'referencias_creditos.pdf',
@@ -28,6 +31,9 @@ class _ReferenciasCreditosScreenState extends State<ReferenciasCreditosScreen> {
             heightFactor: 0.06,
             widthFactor: 1,
             child: ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                primary: topColor,
+              ),
               child: Text(
                 "Voltar",
                 style: TextStyle(

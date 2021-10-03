@@ -11,6 +11,9 @@ class TermosCompromissoScreen extends StatefulWidget {
 }
 
 class _TermosCompromissoScreenState extends State<TermosCompromissoScreen> {
+  Color topColor = Color.fromARGB(255, 42, 74, 117);
+  Color bottomColor = Color.fromARGB(255, 28, 218, 195);
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -24,7 +27,7 @@ class _TermosCompromissoScreenState extends State<TermosCompromissoScreen> {
               fontWeight: FontWeight.bold,
             ),
           ),
-          backgroundColor: Colors.blue,
+          backgroundColor: topColor,
         ),
         body: SfPdfViewer.asset(
           'termos_compromisso.pdf',
@@ -33,6 +36,9 @@ class _TermosCompromissoScreenState extends State<TermosCompromissoScreen> {
           heightFactor: 0.06,
           widthFactor: 1,
           child: ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              primary: topColor,
+            ),
             child: Text(
               "Aceitar",
               style: TextStyle(

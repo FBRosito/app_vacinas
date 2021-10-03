@@ -11,6 +11,9 @@ class RecomendacoesGeraisScreen extends StatefulWidget {
 }
 
 class _RecomendacoesGeraisScreenState extends State<RecomendacoesGeraisScreen> {
+  Color topColor = Color.fromARGB(255, 42, 74, 117);
+  Color bottomColor = Color.fromARGB(255, 28, 218, 195);
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -19,7 +22,7 @@ class _RecomendacoesGeraisScreenState extends State<RecomendacoesGeraisScreen> {
         child: Scaffold(
           appBar: AppBar(
             title: const Text("Recomendações Gerais"),
-            backgroundColor: Colors.blue,
+            backgroundColor: topColor,
           ),
           body: SfPdfViewer.asset(
             'recomendacoes_gerais.pdf',
@@ -28,6 +31,9 @@ class _RecomendacoesGeraisScreenState extends State<RecomendacoesGeraisScreen> {
             heightFactor: 0.06,
             widthFactor: 1,
             child: ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                primary: topColor,
+              ),
               child: Text(
                 "Voltar",
                 style: TextStyle(

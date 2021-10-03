@@ -16,12 +16,15 @@ class _CasosClinicosScreen1State extends State<CasosClinicosScreen1> {
   var maskFormatter = new MaskTextInputFormatter(
       mask: '##/##/####', filter: {"#": RegExp(r'[0-8]')});
 
+  Color topColor = Color.fromARGB(255, 42, 74, 117);
+  Color bottomColor = Color.fromARGB(255, 28, 218, 195);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text("Digite idade e sexo do usuário: "),
-        backgroundColor: Colors.blue,
+        backgroundColor: topColor,
       ),
       body: SizedBox.expand(
         child: Column(
@@ -33,7 +36,7 @@ class _CasosClinicosScreen1State extends State<CasosClinicosScreen1> {
               padding: EdgeInsets.only(left: 100, right: 100),
               child: DropdownButton<String>(
                 isExpanded: true,
-                dropdownColor: Colors.grey,
+                dropdownColor: topColor,
                 value: dropdownValue,
                 icon: const Icon(
                   Icons.arrow_downward,
@@ -113,6 +116,7 @@ class _CasosClinicosScreen1State extends State<CasosClinicosScreen1> {
                   );
                 },
                 style: ElevatedButton.styleFrom(
+                  primary: topColor,
                   fixedSize: Size(320, 60),
                 ),
               ),

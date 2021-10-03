@@ -10,6 +10,9 @@ class PrivacyScreen extends StatefulWidget {
 }
 
 class _PrivacyScreenState extends State<PrivacyScreen> {
+  Color topColor = Color.fromARGB(255, 42, 74, 117);
+  Color bottomColor = Color.fromARGB(255, 28, 218, 195);
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -23,7 +26,7 @@ class _PrivacyScreenState extends State<PrivacyScreen> {
               fontWeight: FontWeight.bold,
             ),
           ),
-          backgroundColor: Colors.blue,
+          backgroundColor: topColor,
         ),
         body: SfPdfViewer.asset(
           'politica_privacidade.pdf',
@@ -32,6 +35,9 @@ class _PrivacyScreenState extends State<PrivacyScreen> {
           heightFactor: 0.06,
           widthFactor: 1,
           child: ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              primary: topColor,
+            ),
             child: Text(
               "Aceitar",
               style: TextStyle(

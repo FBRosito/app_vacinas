@@ -16,11 +16,19 @@ class MenuScreen extends StatefulWidget {
 }
 
 class _MenuScreenState extends State<MenuScreen> {
+  Color topColor = Color.fromARGB(255, 42, 74, 117);
+  Color bottomColor = Color.fromARGB(255, 28, 218, 195);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        color: Colors.blue[400],
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: [topColor, bottomColor]),
+        ),
         height: MediaQuery.of(context).size.height,
         padding: EdgeInsets.symmetric(
           horizontal: 50,
@@ -70,6 +78,7 @@ class _MenuScreenState extends State<MenuScreen> {
                         ),
                       ),
                       style: ElevatedButton.styleFrom(
+                        primary: topColor,
                         fixedSize: Size(240, 80),
                       ),
                     ),
@@ -90,6 +99,7 @@ class _MenuScreenState extends State<MenuScreen> {
                         ),
                       ),
                       style: ElevatedButton.styleFrom(
+                        primary: topColor,
                         fixedSize: Size(240, 80),
                       ),
                     ),
@@ -110,6 +120,7 @@ class _MenuScreenState extends State<MenuScreen> {
                         ),
                       ),
                       style: ElevatedButton.styleFrom(
+                        primary: topColor,
                         fixedSize: Size(240, 80),
                       ),
                     ),
@@ -130,6 +141,7 @@ class _MenuScreenState extends State<MenuScreen> {
                         ),
                       ),
                       style: ElevatedButton.styleFrom(
+                        primary: topColor,
                         fixedSize: Size(240, 80),
                       ),
                     ),
@@ -150,6 +162,7 @@ class _MenuScreenState extends State<MenuScreen> {
                         ),
                       ),
                       style: ElevatedButton.styleFrom(
+                        primary: topColor,
                         fixedSize: Size(240, 80),
                       ),
                     ),
@@ -170,6 +183,7 @@ class _MenuScreenState extends State<MenuScreen> {
                         ),
                       ),
                       style: ElevatedButton.styleFrom(
+                        primary: topColor,
                         fixedSize: Size(240, 80),
                       ),
                     ),
@@ -190,6 +204,7 @@ class _MenuScreenState extends State<MenuScreen> {
                         ),
                       ),
                       style: ElevatedButton.styleFrom(
+                        primary: topColor,
                         fixedSize: Size(240, 80),
                       ),
                     ),
