@@ -90,7 +90,7 @@ class _CasosClinicosScreen2State extends State<CasosClinicosScreen2> {
         builder: (context) {
           return AlertDialog(
             title: Text("Simulação do Caso Clínico - Conduta indicada"),
-            content: Column(
+            content: ListView(
               children: [
                 ListTile(
                   title: Text(
