@@ -25,7 +25,7 @@ class _RecomendacoesGeraisScreenState extends State<RecomendacoesGeraisScreen> {
             backgroundColor: topColor,
           ),
           body: SfPdfViewer.asset(
-            'recomendacoes_gerais.pdf',
+            'assets/recomendacoes_gerais.pdf',
           ),
           bottomNavigationBar: FractionallySizedBox(
             heightFactor: 0.06,

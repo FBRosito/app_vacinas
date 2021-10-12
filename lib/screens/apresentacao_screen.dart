@@ -25,7 +25,7 @@ class _ApresentacaoScreenState extends State<ApresentacaoScreen> {
             backgroundColor: topColor,
           ),
           body: SfPdfViewer.asset(
-            'apresentacao.pdf',
+            'assets/apresentacao.pdf',
           ),
           bottomNavigationBar: FractionallySizedBox(
             heightFactor: 0.06,

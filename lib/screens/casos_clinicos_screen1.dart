@@ -33,7 +33,7 @@ class _CasosClinicosScreen1State extends State<CasosClinicosScreen1> {
           children: <Widget>[
             Padding(padding: EdgeInsets.only(bottom: 100)),
             Padding(
-              padding: EdgeInsets.only(left: 100, right: 100),
+              padding: EdgeInsets.only(left: 50, right: 50),
               child: DropdownButton<String>(
                 isExpanded: true,
                 dropdownColor: topColor,
@@ -72,7 +72,7 @@ class _CasosClinicosScreen1State extends State<CasosClinicosScreen1> {
             ),
             Padding(padding: EdgeInsets.only(bottom: 50)),
             Padding(
-              padding: EdgeInsets.only(left: 100, right: 100),
+              padding: EdgeInsets.only(left: 50, right: 50),
               child: Text(
                 'Escreva a data de nascimento do usuário: ',
                 style: TextStyle(
@@ -83,7 +83,7 @@ class _CasosClinicosScreen1State extends State<CasosClinicosScreen1> {
             ),
             Padding(padding: EdgeInsets.only(bottom: 20)),
             Padding(
-              padding: EdgeInsets.only(left: 100, right: 100),
+              padding: EdgeInsets.only(left: 50, right: 50),
               child: TextField(
                 inputFormatters: [maskFormatter],
                 decoration: InputDecoration(
@@ -96,7 +96,7 @@ class _CasosClinicosScreen1State extends State<CasosClinicosScreen1> {
                 ),
               ),
             ),
-            Padding(padding: EdgeInsets.only(bottom: 375)),
+            Padding(padding: EdgeInsets.only(bottom: 300)),
             Padding(
               padding: EdgeInsets.only(left: 100, right: 100),
               child: ElevatedButton(

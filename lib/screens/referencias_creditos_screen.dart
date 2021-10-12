@@ -25,7 +25,7 @@ class _ReferenciasCreditosScreenState extends State<ReferenciasCreditosScreen> {
             backgroundColor: topColor,
           ),
           body: SfPdfViewer.asset(
-            'referencias_creditos.pdf',
+            'assets/referencias_creditos.pdf',
           ),
           bottomNavigationBar: FractionallySizedBox(
             heightFactor: 0.06,

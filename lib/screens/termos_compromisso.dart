@@ -30,7 +30,7 @@ class _TermosCompromissoScreenState extends State<TermosCompromissoScreen> {
           backgroundColor: topColor,
         ),
         body: SfPdfViewer.asset(
-          'termos_compromisso.pdf',
+          'assets/termos_compromisso.pdf',
         ),
         bottomNavigationBar: FractionallySizedBox(
           heightFactor: 0.06,

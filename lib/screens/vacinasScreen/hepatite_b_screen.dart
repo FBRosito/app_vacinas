@@ -23,7 +23,7 @@ class _HepatiteBScreenState extends State<HepatiteBScreen> {
             backgroundColor: topColor,
           ),
           body: SfPdfViewer.asset(
-            'hepatite_b.pdf',
+            'assets/hepatite_b.pdf',
           ),
         ),
       ),
