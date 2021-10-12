@@ -22,8 +22,8 @@ class _CalendarioCriancaScreenState extends State<CalendarioCriancaScreen> {
             title: const Text("Calendário Vacinal - Criança"),
             backgroundColor: topColor,
           ),
-          body: SfPdfViewer.network(
-            'https://docs.google.com/document/d/1MFd92rxW_wwN1y4XH9vmwU53YF4QZkhP/export?format=pdf&ouid=103452109716217312813&rtpof=true&sd=true',
+          body: SfPdfViewer.asset(
+            'assets/calendario_crianca.pdf',
           ),
         ),
       ),
