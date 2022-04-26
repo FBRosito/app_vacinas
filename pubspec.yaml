@@ -30,6 +30,7 @@ dependencies:
   flutter_widgets: ^0.1.12
   mask_text_input_formatter: ^2.0.0
   syncfusion_flutter_pdfviewer: ^19.3.45-beta
+  string_validator: ^0.3.0
 
 
 dev_dependencies:

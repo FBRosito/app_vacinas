@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:app_vacinas/screens/privacy_screen.dart';
 import 'package:flutter/material.dart';
 

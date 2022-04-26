@@ -1,4 +1,3 @@
-import 'dart:ui';
 import 'package:app_vacinas/screens/apresentacao_screen.dart';
 import 'package:app_vacinas/screens/calendarios_vacinais_screen.dart';
 import 'package:app_vacinas/screens/casos_clinicos_screen1.dart';

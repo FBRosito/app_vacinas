@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 
-class CalendarioCriancaScreen extends StatefulWidget {
+class CalendarioAdolescenteScreen extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return _CalendarioCriancaScreenState();
+    return _CalendarioAdolescenteScreenState();
   }
 }
 
-class _CalendarioCriancaScreenState extends State<CalendarioCriancaScreen> {
+class _CalendarioAdolescenteScreenState extends State<CalendarioAdolescenteScreen> {
   Color topColor = Color.fromARGB(255, 42, 74, 117);
   Color bottomColor = Color.fromARGB(255, 28, 218, 195);
 
@@ -19,11 +19,11 @@ class _CalendarioCriancaScreenState extends State<CalendarioCriancaScreen> {
         quarterTurns: 1,
         child: Scaffold(
           appBar: AppBar(
-            title: const Text("Calendário Vacinal - Criança"),
+            title: const Text("Calendário Vacinal - Adolescente"),
             backgroundColor: topColor,
           ),
           body: SfPdfViewer.asset(
-            'assets/calendario_crianca.pdf',
+            'assets/calendario_adolescente.pdf',
           ),
         ),
       ),

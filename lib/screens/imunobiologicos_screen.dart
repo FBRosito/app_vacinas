@@ -273,32 +273,6 @@ class _ImunoScreenState extends State<ImunoScreen> {
             ),
             ListTile(
               leading: Icon(Icons.health_and_safety_outlined),
-              title: Text('Pneumo 23'),
-              subtitle: Text('Clique para acessar o menu dessa vacina'),
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => HepatiteBScreen(),
-                  ),
-                );
-              },
-            ),
-            ListTile(
-              leading: Icon(Icons.health_and_safety_outlined),
-              title: Text('Pneumo 13'),
-              subtitle: Text('Clique para acessar o menu dessa vacina'),
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => HepatiteBScreen(),
-                  ),
-                );
-              },
-            ),
-            ListTile(
-              leading: Icon(Icons.health_and_safety_outlined),
               title: Text('COVID- 19'),
               subtitle: Text('Clique para acessar o menu dessa vacina'),
               onTap: () {
@@ -324,9 +298,92 @@ class _ImunoScreenState extends State<ImunoScreen> {
               },
             ),
             ListTile(
-              leading: Icon(Icons.health_and_safety_outlined),
-              title: Text('HIB'),
-              subtitle: Text('Clique para acessar o menu dessa vacina'),
+              leading: Icon(Icons.info_outline_rounded),
+              tileColor: Colors.grey[300],
+              title: Text(
+                'Abaixo apenas Vacinas Especiais disponibilizadas na CRIE',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 17,
+                ),
+              ),
+            ),
+            ListTile(
+              leading: Icon(Icons.bloodtype_outlined),
+              title: Text(
+                'DTPa',
+              ),
+              subtitle: Text(
+                'Clique para acessar o menu dessa vacina',
+              ),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => HepatiteBScreen(),
+                  ),
+                );
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.bloodtype_outlined),
+              title: Text(
+                'Hexavalente',
+              ),
+              subtitle: Text(
+                'Clique para acessar o menu dessa vacina',
+              ),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => HepatiteBScreen(),
+                  ),
+                );
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.bloodtype_outlined),
+              title: Text(
+                'Pneumo 13',
+              ),
+              subtitle: Text(
+                'Clique para acessar o menu dessa vacina',
+              ),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => HepatiteBScreen(),
+                  ),
+                );
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.bloodtype_outlined),
+              title: Text(
+                'Pneumo 23',
+              ),
+              subtitle: Text(
+                'Clique para acessar o menu dessa vacina',
+              ),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => HepatiteBScreen(),
+                  ),
+                );
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.bloodtype_outlined),
+              title: Text(
+                'HIB',
+              ),
+              subtitle: Text(
+                'Clique para acessar o menu dessa vacina',
+              ),
               onTap: () {
                 Navigator.push(
                   context,
