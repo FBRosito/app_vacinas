@@ -2,7 +2,7 @@
 //import 'package:app_vacinas/screens/menu_screen.dart';
 import 'package:app_vacinas/screens/casos_clinicos_screen3.dart';
 import 'package:flutter/material.dart';
-import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
+//import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 
 class CasosClinicosScreen2 extends StatefulWidget {
   const CasosClinicosScreen2({Key? key}) : super(key: key);
