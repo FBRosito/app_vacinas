@@ -12,12 +12,17 @@ class CasosClinicosScreen1 extends StatefulWidget {
 
 class _CasosClinicosScreen1State extends State<CasosClinicosScreen1> {
   String dropdownValue = 'Selecione o sexo do usuário';
+  final formKey = GlobalKey<FormState>();
+  var modelo = ModeloUsuario();
 
   var maskFormatter = new MaskTextInputFormatter(
       mask: '##/##/####', filter: {"#": RegExp(r'[0-8]')});
 
   Color topColor = Color.fromARGB(255, 42, 74, 117);
   Color bottomColor = Color.fromARGB(255, 28, 218, 195);
+
+  TextEditingController nomeController = TextEditingController();
+  DateTime dataNascimentoUsuario = DateTime.now();
 
   @override
   Widget build(BuildContext context) {
@@ -84,7 +89,9 @@ class _CasosClinicosScreen1State extends State<CasosClinicosScreen1> {
             Padding(padding: EdgeInsets.only(bottom: 20)),
             Padding(
               padding: EdgeInsets.only(left: 50, right: 50),
-              child: TextField(
+              child: TextFormField(
+                key: formKey,
+                controller: nomeController,
                 inputFormatters: [maskFormatter],
                 decoration: InputDecoration(
                   enabledBorder: UnderlineInputBorder(
@@ -94,6 +101,11 @@ class _CasosClinicosScreen1State extends State<CasosClinicosScreen1> {
                     borderSide: BorderSide(color: Colors.black),
                   ),
                 ),
+                validator: (text) => text == null || text.isEmpty
+                    ? 'Esse campo deve ser preenchido!'
+                    : null,
+                onSaved: (text) =>
+                    modelo = modelo.copyWith(dataNascimento: text),
               ),
             ),
             Padding(padding: EdgeInsets.only(bottom: 300)),
@@ -108,12 +120,14 @@ class _CasosClinicosScreen1State extends State<CasosClinicosScreen1> {
                   ),
                 ),
                 onPressed: () {
-                  Navigator.push(
+                  print(modelo.sexo);
+                  print(dataNascimentoUsuario);
+                  /* Navigator.push(
                     context,
                     MaterialPageRoute(
                       builder: (context) => CasosClinicosScreen2(),
                     ),
-                  );
+                  );*/
                 },
                 style: ElevatedButton.styleFrom(
                   primary: topColor,
@@ -124,6 +138,23 @@ class _CasosClinicosScreen1State extends State<CasosClinicosScreen1> {
           ],
         ),
       ),
+    );
+  }
+}
+
+class ModeloUsuario {
+  String sexo;
+  final String dataNascimento;
+
+  ModeloUsuario({this.sexo = '', this.dataNascimento = ''});
+
+  ModeloUsuario copyWith({
+    String? sexo,
+    String? dataNascimento,
+  }) {
+    return ModeloUsuario(
+      sexo: sexo ?? this.sexo,
+      dataNascimento: dataNascimento ?? this.dataNascimento,
     );
   }
 }

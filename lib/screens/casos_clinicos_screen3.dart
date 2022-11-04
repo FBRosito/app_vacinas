@@ -55,6 +55,24 @@ class _CasosClinicosScreen3State extends State<CasosClinicosScreen3> {
 
   Color topColor = Color.fromARGB(255, 42, 74, 117);
   Color bottomColor = Color.fromARGB(255, 28, 218, 195);
+
+  DateTime dateTimeBCG = DateTime.now();
+  DateTime dateTimeHepB = DateTime.now();
+  DateTime dateTimePent1 = DateTime.now();
+  DateTime dateTimePent2 = DateTime.now();
+  DateTime dateTimePent3 = DateTime.now();
+  DateTime dateTimeVIP1 = DateTime.now();
+  DateTime dateTimeVIP2 = DateTime.now();
+  DateTime dateTimeVIP3 = DateTime.now();
+  DateTime dateTimeRotaV1 = DateTime.now();
+  DateTime dateTimeRotaV2 = DateTime.now();
+  DateTime dateTimePneumoc1 = DateTime.now();
+  DateTime dateTimePneumoc2 = DateTime.now();
+  DateTime dateTimeMeningo1 = DateTime.now();
+  DateTime dateTimeMeningo2 = DateTime.now();
+  DateTime dateTimeInfluenza = DateTime.now();
+  DateTime dateTimeFebreA1 = DateTime.now();
+
   final bool isVisible0a = isVisible0;
   final bool isVisible1a = isVisible1;
   final bool isVisible2a = isVisible2;
@@ -410,39 +428,7 @@ class _CasosClinicosScreen3State extends State<CasosClinicosScreen3> {
                 primary: topColor,
               ),
               onPressed: () {
-                var dateTime0 = DateFormat('d/M/y').parse(controller0.text);
-                print(dateTime0);
-                var dateTime1 = DateFormat('d/M/y').parse(controller1.text);
-                print(dateTime1);
-                var dateTime2 = DateFormat('d/M/y').parse(controller2.text);
-                print(dateTime2);
-                var dateTime3 = DateFormat('d/M/y').parse(controller3.text);
-                print(dateTime3);
-                var dateTime4 = DateFormat('d/M/y').parse(controller4.text);
-                print(dateTime4);
-                var dateTime5 = DateFormat('d/M/y').parse(controller5.text);
-                print(dateTime5);
-                var dateTime6 = DateFormat('d/M/y').parse(controller6.text);
-                print(dateTime6);
-                var dateTime7 = DateFormat('d/M/y').parse(controller7.text);
-                print(dateTime7);
-                var dateTime8 = DateFormat('d/M/y').parse(controller8.text);
-                print(dateTime8);
-                var dateTime9 = DateFormat('d/M/y').parse(controller9.text);
-                print(dateTime9);
-                var dateTime10 = DateFormat('d/M/y').parse(controller10.text);
-                print(dateTime10);
-                var dateTime11 = DateFormat('d/M/y').parse(controller11.text);
-                print(dateTime11);
-                var dateTime12 = DateFormat('d/M/y').parse(controller12.text);
-                print(dateTime12);
-                var dateTime13 = DateFormat('d/M/y').parse(controller13.text);
-                print(dateTime13);
-                var dateTime14 = DateFormat('d/M/y').parse(controller14.text);
-                print(dateTime14);
-                var dateTime15 = DateFormat('d/M/y').parse(controller15.text);
-                print(dateTime15);
-
+                registraDatas();
                 //createAlertDialog2(context);
               },
               child: Text(
@@ -457,4 +443,43 @@ class _CasosClinicosScreen3State extends State<CasosClinicosScreen3> {
       ),
     );
   }
+
+  registraDatas() {
+    dateTimeBCG = DateFormat('d/M/y').parse(controller0.text);
+    print(dateTimeBCG);
+    dateTimeHepB = DateFormat('d/M/y').parse(controller1.text);
+    print(dateTimeHepB);
+    dateTimePent1 = DateFormat('d/M/y').parse(controller2.text);
+    print(dateTimePent1);
+    dateTimePent2 = DateFormat('d/M/y').parse(controller3.text);
+    print(dateTimePent2);
+    dateTimePent3 = DateFormat('d/M/y').parse(controller4.text);
+    print(dateTimePent3);
+    dateTimeVIP1 = DateFormat('d/M/y').parse(controller5.text);
+    print(dateTimeVIP1);
+    dateTimeVIP2 = DateFormat('d/M/y').parse(controller6.text);
+    print(dateTimeVIP2);
+    dateTimeVIP3 = DateFormat('d/M/y').parse(controller7.text);
+    print(dateTimeVIP3);
+    dateTimeRotaV1 = DateFormat('d/M/y').parse(controller8.text);
+    print(dateTimeRotaV1);
+    dateTimeRotaV2 = DateFormat('d/M/y').parse(controller9.text);
+    print(dateTimeRotaV2);
+    dateTimePneumoc1 = DateFormat('d/M/y').parse(controller10.text);
+    print(dateTimePneumoc1);
+    dateTimePneumoc2 = DateFormat('d/M/y').parse(controller11.text);
+    print(dateTimePneumoc2);
+    dateTimeMeningo1 = DateFormat('d/M/y').parse(controller12.text);
+    print(dateTimeMeningo1);
+    dateTimeMeningo2 = DateFormat('d/M/y').parse(controller13.text);
+    print(dateTimeMeningo2);
+    dateTimeInfluenza = DateFormat('d/M/y').parse(controller14.text);
+    print(dateTimeInfluenza);
+    dateTimeFebreA1 = DateFormat('d/M/y').parse(controller15.text);
+    print(dateTimeFebreA1);
+  }
+
+  /*void AplicacaoRegrasVacinas() {
+    dateTimeBCG;
+  }*/
 }
