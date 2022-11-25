@@ -108,7 +108,7 @@ class _CasosClinicosScreen1State extends State<CasosClinicosScreen1> {
                     modelo = modelo.copyWith(dataNascimento: text),
               ),
             ),
-            Padding(padding: EdgeInsets.only(bottom: 300)),
+            Padding(padding: EdgeInsets.only(bottom: 100)),
             Padding(
               padding: EdgeInsets.only(left: 100, right: 100),
               child: ElevatedButton(
@@ -122,12 +122,12 @@ class _CasosClinicosScreen1State extends State<CasosClinicosScreen1> {
                 onPressed: () {
                   print(modelo.sexo);
                   print(dataNascimentoUsuario);
-                  /* Navigator.push(
+                   Navigator.push(
                     context,
                     MaterialPageRoute(
                       builder: (context) => CasosClinicosScreen2(),
                     ),
-                  );*/
+                  );
                 },
                 style: ElevatedButton.styleFrom(
                   primary: topColor,
