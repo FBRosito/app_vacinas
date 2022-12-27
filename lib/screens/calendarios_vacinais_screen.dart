@@ -1,5 +1,11 @@
 import 'package:app_vacinas/screens/calendariosVacinaisScreen/calendario_adolescente_screen.dart';
+import 'package:app_vacinas/screens/calendariosVacinaisScreen/calendario_adulto_screen.dart';
+import 'package:app_vacinas/screens/calendariosVacinaisScreen/calendario_crianca_exposta_hiv.dart';
 import 'package:app_vacinas/screens/calendariosVacinaisScreen/calendario_crianca_screen.dart';
+import 'package:app_vacinas/screens/calendariosVacinaisScreen/calendario_gestante_screen.dart';
+import 'package:app_vacinas/screens/calendariosVacinaisScreen/calendario_hiv_screen.dart';
+import 'package:app_vacinas/screens/calendariosVacinaisScreen/calendario_idoso_screen.dart';
+import 'package:app_vacinas/screens/calendariosVacinaisScreen/calendario_indigena_screen.dart';
 import 'package:app_vacinas/screens/menu_screen.dart';
 import 'package:app_vacinas/screens/vacinasScreen/hepatite_b_screen.dart';
 import 'package:flutter/material.dart';
@@ -59,7 +65,7 @@ class _CalendariosVacinaisScreenState extends State<CalendariosVacinaisScreen> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => HepatiteBScreen(),
+                    builder: (context) => CalendarioAdultoScreen(),
                   ),
                 );
               },
@@ -72,7 +78,7 @@ class _CalendariosVacinaisScreenState extends State<CalendariosVacinaisScreen> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => HepatiteBScreen(),
+                    builder: (context) => CalendarioGestanteScreen(),
                   ),
                 );
               },
@@ -85,7 +91,7 @@ class _CalendariosVacinaisScreenState extends State<CalendariosVacinaisScreen> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => HepatiteBScreen(),
+                    builder: (context) => CalendarioIdosoScreen(),
                   ),
                 );
               },
@@ -93,12 +99,12 @@ class _CalendariosVacinaisScreenState extends State<CalendariosVacinaisScreen> {
             ListTile(
               leading: Icon(Icons.health_and_safety_outlined),
               title: Text('Calendário Indígena'),
-              subtitle: Text('Clique para acessar o calendário da criança'),
+              subtitle: Text('Clique para acessar o calendário do indígena'),
               onTap: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => CalendarioCriancaScreen(),
+                    builder: (context) => CalendarioIndigenaScreen(),
                   ),
                 );
               },
@@ -106,12 +112,12 @@ class _CalendariosVacinaisScreenState extends State<CalendariosVacinaisScreen> {
             ListTile(
               leading: Icon(Icons.health_and_safety_outlined),
               title: Text('Calendário Criança Exposta HIV'),
-              subtitle: Text('Clique para acessar o calendário da criança'),
+              subtitle: Text('Clique para acessar o calendário da criança exposta ao HIV'),
               onTap: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => CalendarioCriancaScreen(),
+                    builder: (context) => CalendarioCriancaAoHIVScreen(),
                   ),
                 );
               },
@@ -119,12 +125,12 @@ class _CalendariosVacinaisScreenState extends State<CalendariosVacinaisScreen> {
             ListTile(
               leading: Icon(Icons.health_and_safety_outlined),
               title: Text('Calendário HIV'),
-              subtitle: Text('Clique para acessar o calendário da criança'),
+              subtitle: Text('Clique para acessar o calendário pessoa vivendo com HIV'),
               onTap: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => CalendarioCriancaScreen(),
+                    builder: (context) => CalendarioHIVScreen(),
                   ),
                 );
               },
