@@ -1,3 +1,24 @@
+import 'package:app_vacinas/screens/eapvScreens/bcg_eapv_screen.dart';
+import 'package:app_vacinas/screens/eapvScreens/covid19_eapv_screen.dart';
+import 'package:app_vacinas/screens/eapvScreens/dt_eapv_screen.dart';
+import 'package:app_vacinas/screens/eapvScreens/dtpa_adulto_eapv_screen.dart';
+import 'package:app_vacinas/screens/eapvScreens/dtpa_infantil_eapv_screen.dart';
+import 'package:app_vacinas/screens/eapvScreens/febreamarela_eapv_screen.dart';
+import 'package:app_vacinas/screens/eapvScreens/hepatite_a_eapv_screen.dart';
+import 'package:app_vacinas/screens/eapvScreens/hib_eapv_screen.dart';
+import 'package:app_vacinas/screens/eapvScreens/hpv_eapv_screen.dart';
+import 'package:app_vacinas/screens/eapvScreens/influenza_eapv_screen.dart';
+import 'package:app_vacinas/screens/eapvScreens/meningo_acwy_eapv_screen.dart';
+import 'package:app_vacinas/screens/eapvScreens/meningo_c_eapv_screen.dart';
+import 'package:app_vacinas/screens/eapvScreens/pentavalente_eapv_screen.dart';
+import 'package:app_vacinas/screens/eapvScreens/pneumo10_eapv_screen.dart';
+import 'package:app_vacinas/screens/eapvScreens/pneumo13_eapv_screen.dart';
+import 'package:app_vacinas/screens/eapvScreens/pneumo23_eapv_screen.dart';
+import 'package:app_vacinas/screens/eapvScreens/tetraviral_eapv_screen.dart';
+import 'package:app_vacinas/screens/eapvScreens/triplicebac_infantil_eapv_screen.dart';
+import 'package:app_vacinas/screens/eapvScreens/tripliceviral_eapv_screen.dart';
+import 'package:app_vacinas/screens/eapvScreens/varicela_eapv_screen.dart';
+import 'package:app_vacinas/screens/eapvScreens/vip_eapv_screen.dart';
 import 'package:app_vacinas/screens/vacinasScreen/hepatite_b_screen.dart';
 import 'package:flutter/material.dart';
 import 'eapvScreens/hepatite_b_eapv_screen.dart';
@@ -45,7 +66,7 @@ class _EapvScreenState extends State<EapvScreen> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => HepatiteBScreen(),
+                    builder: (context) => BCGEapvScreen(),
                   ),
                 );
               },
@@ -58,7 +79,7 @@ class _EapvScreenState extends State<EapvScreen> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => HepatiteBScreen(),
+                    builder: (context) => PentavalenteEapvScreen(),
                   ),
                 );
               },
@@ -71,7 +92,7 @@ class _EapvScreenState extends State<EapvScreen> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => HepatiteBScreen(),
+                    builder: (context) => VIPEapvScreen(),
                   ),
                 );
               },
@@ -104,26 +125,26 @@ class _EapvScreenState extends State<EapvScreen> {
             ),
             ListTile(
               leading: Icon(Icons.health_and_safety_outlined),
-              title: Text('Pneumo 10'),
+              title: Text('Pneumocócica 10'),
               subtitle: Text('Clique para acessar o menu EAPV dessa vacina'),
               onTap: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => HepatiteBScreen(),
+                    builder: (context) => Pneumo10EapvScreen(),
                   ),
                 );
               },
             ),
             ListTile(
               leading: Icon(Icons.health_and_safety_outlined),
-              title: Text('Meningo C'),
+              title: Text('Meningocócica C'),
               subtitle: Text('Clique para acessar o menu EAPV dessa vacina'),
               onTap: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => HepatiteBScreen(),
+                    builder: (context) => MeningoCEapvScreen(),
                   ),
                 );
               },
@@ -136,7 +157,7 @@ class _EapvScreenState extends State<EapvScreen> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => HepatiteBScreen(),
+                    builder: (context) => TripliceViralEapvScreen(),
                   ),
                 );
               },
@@ -149,7 +170,7 @@ class _EapvScreenState extends State<EapvScreen> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => HepatiteBScreen(),
+                    builder: (context) => TetraviralEapvScreen(),
                   ),
                 );
               },
@@ -162,7 +183,7 @@ class _EapvScreenState extends State<EapvScreen> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => HepatiteBScreen(),
+                    builder: (context) => FebreAmarelaEapvScreen(),
                   ),
                 );
               },
@@ -175,59 +196,59 @@ class _EapvScreenState extends State<EapvScreen> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => HepatiteBScreen(),
+                    builder: (context) => HepatiteAEapvScreen(),
                   ),
                 );
               },
             ),
             ListTile(
               leading: Icon(Icons.health_and_safety_outlined),
-              title: Text('DTP'),
+              title: Text('Tríplice Bacteriana Infantil (DTP)'),
               subtitle: Text('Clique para acessar o menu EAPV dessa vacina'),
               onTap: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => HepatiteBScreen(),
+                    builder: (context) => DTPEapvScreen(),
                   ),
                 );
               },
             ),
             ListTile(
               leading: Icon(Icons.health_and_safety_outlined),
-              title: Text('dT'),
+              title: Text('Dupla Adulto (dT)'),
               subtitle: Text('Clique para acessar o menu EAPV dessa vacina'),
               onTap: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => HepatiteBScreen(),
+                    builder: (context) => DuplaAdultoEapvScreen(),
                   ),
                 );
               },
             ),
             ListTile(
               leading: Icon(Icons.health_and_safety_outlined),
-              title: Text('dTpa'),
+              title: Text('Tríplice Bacteriana Adulto (dTpa)'),
               subtitle: Text('Clique para acessar o menu EAPV dessa vacina'),
               onTap: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => HepatiteBScreen(),
+                    builder: (context) => DTPAadultoEapvScreen(),
                   ),
                 );
               },
             ),
             ListTile(
               leading: Icon(Icons.health_and_safety_outlined),
-              title: Text('DTPa'),
+              title: Text('Tríplice Bacteriana Infantil Acelular (DTPa)'),
               subtitle: Text('Clique para acessar o menu EAPV dessa vacina'),
               onTap: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => HepatiteBScreen(),
+                    builder: (context) => DTPAinfantilEapvScreen(),
                   ),
                 );
               },
@@ -240,7 +261,7 @@ class _EapvScreenState extends State<EapvScreen> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => HepatiteBScreen(),
+                    builder: (context) => VaricelaEapvScreen(),
                   ),
                 );
               },
@@ -253,59 +274,59 @@ class _EapvScreenState extends State<EapvScreen> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => HepatiteBScreen(),
+                    builder: (context) => HPVEapvScreen(),
                   ),
                 );
               },
             ),
             ListTile(
               leading: Icon(Icons.health_and_safety_outlined),
-              title: Text('Meningo ACWY'),
+              title: Text('Meningocócica ACWY'),
               subtitle: Text('Clique para acessar o menu EAPV dessa vacina'),
               onTap: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => HepatiteBScreen(),
+                    builder: (context) => MeningoACWYEapvScreen(),
                   ),
                 );
               },
             ),
             ListTile(
               leading: Icon(Icons.health_and_safety_outlined),
-              title: Text('Pneumo 23'),
+              title: Text('Pneumocócica 23'),
               subtitle: Text('Clique para acessar o menu EAPV dessa vacina'),
               onTap: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => HepatiteBScreen(),
+                    builder: (context) => Pneumo23EapvScreen(),
                   ),
                 );
               },
             ),
             ListTile(
               leading: Icon(Icons.health_and_safety_outlined),
-              title: Text('Pneumo 13'),
+              title: Text('Pneumocócica 13'),
               subtitle: Text('Clique para acessar o menu EAPV dessa vacina'),
               onTap: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => HepatiteBScreen(),
+                    builder: (context) => Pneumo13EapvScreen(),
                   ),
                 );
               },
             ),
             ListTile(
               leading: Icon(Icons.health_and_safety_outlined),
-              title: Text('COVID- 19'),
+              title: Text('COVID-19'),
               subtitle: Text('Clique para acessar o menu EAPV dessa vacina'),
               onTap: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => HepatiteBScreen(),
+                    builder: (context) => Covid19EapvScreen(),
                   ),
                 );
               },
@@ -318,7 +339,7 @@ class _EapvScreenState extends State<EapvScreen> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => HepatiteBScreen(),
+                    builder: (context) => InfluenzaEapvScreen(),
                   ),
                 );
               },
@@ -331,7 +352,7 @@ class _EapvScreenState extends State<EapvScreen> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => HepatiteBScreen(),
+                    builder: (context) => HIBEapvScreen(),
                   ),
                 );
               },
