@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "111705776356",
+    "project_id": "firebase-vacinas",
+    "storage_bucket": "firebase-vacinas.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:111705776356:android:0a6f9e509381b73339ccf1",
+        "android_client_info": {
+          "package_name": "com.example.app_vacinas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "111705776356-tsfgr04p15l4410ffgr7kppj6b06imgh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCNS-Rr4OcVMjJMk2nLtV06ey5qIjZoYUY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "111705776356-tsfgr04p15l4410ffgr7kppj6b06imgh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

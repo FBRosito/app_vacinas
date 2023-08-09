@@ -1,5 +1,9 @@
 import 'package:app_vacinas/screens/privacy_screen.dart';
+//import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
+//import 'package:firebase_auth/firebase_auth.dart';
+import 'package:uuid/uuid.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -13,6 +17,10 @@ class _LoginScreenState extends State<LoginScreen> {
   String dropdownValue = 'Selecione sua ocupação';
   Color topColor = Color.fromARGB(255, 42, 74, 117);
   Color bottomColor = Color.fromARGB(255, 28, 218, 195);
+
+  final _emailController = TextEditingController();
+  final _estadoController = TextEditingController();
+  final _cidadeController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -55,6 +63,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 child: Column(
                   children: [
                     TextFormField(
+                      controller: _emailController,
                       cursorColor: Colors.white,
                       style: TextStyle(
                         color: Colors.white,
@@ -83,6 +92,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                     ),
                     TextFormField(
+                      controller: _estadoController,
                       cursorColor: Colors.white,
                       style: TextStyle(
                         color: Colors.white,
@@ -111,6 +121,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                     Padding(padding: EdgeInsets.only(bottom: 10)),
                     TextFormField(
+                      controller: _cidadeController,
                       cursorColor: Colors.white,
                       style: TextStyle(
                         color: Colors.white,
@@ -202,7 +213,15 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                     Padding(padding: EdgeInsets.only(bottom: 10)),
                     ElevatedButton(
-                      onPressed: () {
+                      onPressed: () async {
+                        final response = await Supabase.instance.client.from('usuarios').insert([
+                          {
+                            'email': _emailController.text,
+                            'estado': _estadoController.text,
+                            'cidade': _cidadeController.text,
+                            'ocupacao': dropdownValue,
+                          },
+                        ]).execute();
                         Navigator.push(
                           context,
                           MaterialPageRoute(

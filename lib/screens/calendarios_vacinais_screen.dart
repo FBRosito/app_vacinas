@@ -7,7 +7,7 @@ import 'package:app_vacinas/screens/calendariosVacinaisScreen/calendario_hiv_scr
 import 'package:app_vacinas/screens/calendariosVacinaisScreen/calendario_idoso_screen.dart';
 import 'package:app_vacinas/screens/calendariosVacinaisScreen/calendario_indigena_screen.dart';
 import 'package:app_vacinas/screens/menu_screen.dart';
-import 'package:app_vacinas/screens/vacinasScreen/hepatite_b_screen.dart';
+//import 'package:app_vacinas/screens/vacinasScreen/hepatite_b_screen.dart';
 import 'package:flutter/material.dart';
 
 class CalendariosVacinaisScreen extends StatefulWidget {

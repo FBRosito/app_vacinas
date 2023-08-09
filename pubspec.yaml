@@ -32,6 +32,10 @@ dependencies:
   syncfusion_flutter_pdfviewer: ^19.3.45-beta
   string_validator: ^0.3.0
   intl: ^0.17.0
+  uuid: ^3.0.5
+  supabase_flutter: ^1.6.2
+  
+ 
 
 
 dev_dependencies:
