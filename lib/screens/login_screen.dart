@@ -215,17 +215,14 @@ class _LoginScreenState extends State<LoginScreen> {
                     ElevatedButton(
                       onPressed: () async {
                         try {
-                          final response = await Supabase.instance.client.from('users').insert([
+                          await Supabase.instance.client.from('users').insert([
                             {
                               'email': _emailController.text,
                               'state': _estadoController.text,
                               'city': _cidadeController.text,
                               'occupation': dropdownValue,
                             },
-                          ]).execute();
-                          if (response.error != null) {
-                            throw response.error!;
-                          }
+                          ]);
                           Navigator.push(
                             context,
                             MaterialPageRoute(
