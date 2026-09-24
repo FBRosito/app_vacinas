@@ -214,20 +214,31 @@ class _LoginScreenState extends State<LoginScreen> {
                     Padding(padding: EdgeInsets.only(bottom: 10)),
                     ElevatedButton(
                       onPressed: () async {
-                        final response = await Supabase.instance.client.from('usuarios').insert([
-                          {
-                            'email': _emailController.text,
-                            'estado': _estadoController.text,
-                            'cidade': _cidadeController.text,
-                            'ocupacao': dropdownValue,
-                          },
-                        ]).execute();
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => PrivacyScreen(),
-                          ),
-                        );
+                        try {
+                          final response = await Supabase.instance.client.from('users').insert([
+                            {
+                              'email': _emailController.text,
+                              'state': _estadoController.text,
+                              'city': _cidadeController.text,
+                              'occupation': dropdownValue,
+                            },
+                          ]).execute();
+                          if (response.error != null) {
+                            throw response.error!;
+                          }
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => PrivacyScreen(),
+                            ),
+                          );
+                        } catch (e) {
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            SnackBar(
+                              content: Text('Não foi possível salvar. Verifique sua conexão e tente novamente.'),
+                            ),
+                          );
+                        }
                       },
                       child: Text(
                         "Entrar",
