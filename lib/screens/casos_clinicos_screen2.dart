@@ -104,8 +104,6 @@ class _CasosClinicosScreen2State extends State<CasosClinicosScreen2> {
                 }
               }).toList();
             }
-
-            print(listaCheckBox());
             if (listaCheckBox().contains('BCG - Dose Única')) {
               isVisible0 = true;
             }
@@ -160,22 +158,6 @@ class _CasosClinicosScreen2State extends State<CasosClinicosScreen2> {
             if (listaCheckBox().contains('Febre Amarela- 1ª dose')) {
               isVisible15 = true;
             }
-            print(isVisible0);
-            print(isVisible1);
-            print(isVisible2);
-            print(isVisible3);
-            print(isVisible4);
-            print(isVisible5);
-            print(isVisible6);
-            print(isVisible7);
-            print(isVisible8);
-            print(isVisible9);
-            print(isVisible10);
-            print(isVisible11);
-            print(isVisible12);
-            print(isVisible13);
-            print(isVisible14);
-            print(isVisible15);
             Navigator.push(
               context,
               MaterialPageRoute(
