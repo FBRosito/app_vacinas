@@ -175,11 +175,6 @@ class _RegistroScreenState extends State<RegistroScreen> {
                               ),
                             );
                             showAlertDialog1(context);
-                            print(modelo.email);
-                            print(modelo.estado);
-                            print(modelo.cidade);
-                            print(modelo.ocupacao);
-                            print(continuarConectado);
                           }
                         },
                         icon: Icon(Icons.save_alt),

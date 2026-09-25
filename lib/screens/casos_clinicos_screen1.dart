@@ -120,8 +120,6 @@ class _CasosClinicosScreen1State extends State<CasosClinicosScreen1> {
                   ),
                 ),
                 onPressed: () {
-                  print(modelo.sexo);
-                  print(dataNascimentoUsuario);
                    Navigator.push(
                     context,
                     MaterialPageRoute(
