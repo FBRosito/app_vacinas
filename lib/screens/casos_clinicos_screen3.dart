@@ -446,37 +446,21 @@ class _CasosClinicosScreen3State extends State<CasosClinicosScreen3> {
 
   registraDatas() {
     dateTimeBCG = DateFormat('d/M/y').parse(controller0.text);
-    print(dateTimeBCG);
     dateTimeHepB = DateFormat('d/M/y').parse(controller1.text);
-    print(dateTimeHepB);
     dateTimePent1 = DateFormat('d/M/y').parse(controller2.text);
-    print(dateTimePent1);
     dateTimePent2 = DateFormat('d/M/y').parse(controller3.text);
-    print(dateTimePent2);
     dateTimePent3 = DateFormat('d/M/y').parse(controller4.text);
-    print(dateTimePent3);
     dateTimeVIP1 = DateFormat('d/M/y').parse(controller5.text);
-    print(dateTimeVIP1);
     dateTimeVIP2 = DateFormat('d/M/y').parse(controller6.text);
-    print(dateTimeVIP2);
     dateTimeVIP3 = DateFormat('d/M/y').parse(controller7.text);
-    print(dateTimeVIP3);
     dateTimeRotaV1 = DateFormat('d/M/y').parse(controller8.text);
-    print(dateTimeRotaV1);
     dateTimeRotaV2 = DateFormat('d/M/y').parse(controller9.text);
-    print(dateTimeRotaV2);
     dateTimePneumoc1 = DateFormat('d/M/y').parse(controller10.text);
-    print(dateTimePneumoc1);
     dateTimePneumoc2 = DateFormat('d/M/y').parse(controller11.text);
-    print(dateTimePneumoc2);
     dateTimeMeningo1 = DateFormat('d/M/y').parse(controller12.text);
-    print(dateTimeMeningo1);
     dateTimeMeningo2 = DateFormat('d/M/y').parse(controller13.text);
-    print(dateTimeMeningo2);
     dateTimeInfluenza = DateFormat('d/M/y').parse(controller14.text);
-    print(dateTimeInfluenza);
     dateTimeFebreA1 = DateFormat('d/M/y').parse(controller15.text);
-    print(dateTimeFebreA1);
   }
 
   /*void AplicacaoRegrasVacinas() {
