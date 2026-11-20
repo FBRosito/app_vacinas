@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 //import 'package:firebase_auth/firebase_auth.dart';
 import 'package:uuid/uuid.dart';
+import 'package:string_validator/string_validator.dart' as validator;
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -18,6 +19,7 @@ class _LoginScreenState extends State<LoginScreen> {
   Color topColor = Color.fromARGB(255, 42, 74, 117);
   Color bottomColor = Color.fromARGB(255, 28, 218, 195);
 
+  final _formKey = GlobalKey<FormState>();
   final _emailController = TextEditingController();
   final _estadoController = TextEditingController();
   final _cidadeController = TextEditingController();
@@ -60,96 +62,83 @@ class _LoginScreenState extends State<LoginScreen> {
                     fontWeight: FontWeight.bold),
               ),
               Form(
+                key: _formKey,
                 child: Column(
                   children: [
                     TextFormField(
                       controller: _emailController,
                       cursorColor: Colors.white,
-                      style: TextStyle(
-                        color: Colors.white,
-                      ),
+                      style: TextStyle(color: Colors.white),
                       autofocus: true,
                       decoration: InputDecoration(
                         enabledBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(
-                            color: Colors.white,
-                          ),
+                          borderSide: BorderSide(color: Colors.white),
                         ),
                         focusedBorder: UnderlineInputBorder(
                           borderSide: BorderSide(color: Colors.white),
                         ),
                         labelText: "E-mail",
-                        labelStyle: TextStyle(
-                          color: Colors.white,
-                        ),
-                        prefixIcon: Icon(
-                          Icons.mail_outline,
-                          color: Colors.white,
-                        ),
+                        labelStyle: TextStyle(color: Colors.white),
+                        prefixIcon: Icon(Icons.mail_outline, color: Colors.white),
                         border: UnderlineInputBorder(
                           borderSide: BorderSide(color: Colors.white),
                         ),
                       ),
+                      validator: (text) {
+                        if (text == null || text.isEmpty) {
+                          return 'Esse campo deve ser preenchido!';
+                        }
+                        if (!validator.isEmail(text)) {
+                          return 'Esse campo deve ser preenchido com um email!';
+                        }
+                        return null;
+                      },
                     ),
                     TextFormField(
                       controller: _estadoController,
                       cursorColor: Colors.white,
-                      style: TextStyle(
-                        color: Colors.white,
-                      ),
+                      style: TextStyle(color: Colors.white),
                       decoration: InputDecoration(
                         enabledBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(
-                            color: Colors.white,
-                          ),
+                          borderSide: BorderSide(color: Colors.white),
                         ),
                         focusedBorder: UnderlineInputBorder(
                           borderSide: BorderSide(color: Colors.white),
                         ),
                         labelText: "Estado",
-                        labelStyle: TextStyle(
-                          color: Colors.white,
-                        ),
-                        prefixIcon: Icon(
-                          Icons.location_on,
-                          color: Colors.white,
-                        ),
+                        labelStyle: TextStyle(color: Colors.white),
+                        prefixIcon: Icon(Icons.location_on, color: Colors.white),
                         border: UnderlineInputBorder(
                           borderSide: BorderSide(color: Colors.white),
                         ),
                       ),
+                      validator: (text) => text == null || text.isEmpty
+                          ? 'Esse campo deve ser preenchido!'
+                          : null,
                     ),
                     Padding(padding: EdgeInsets.only(bottom: 10)),
                     TextFormField(
                       controller: _cidadeController,
                       cursorColor: Colors.white,
-                      style: TextStyle(
-                        color: Colors.white,
-                      ),
+                      style: TextStyle(color: Colors.white),
                       decoration: InputDecoration(
                         enabledBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(
-                            color: Colors.white,
-                          ),
+                          borderSide: BorderSide(color: Colors.white),
                         ),
                         focusedBorder: UnderlineInputBorder(
                           borderSide: BorderSide(color: Colors.white),
                         ),
-                        hintStyle: TextStyle(
-                          color: Colors.white,
-                        ),
+                        hintStyle: TextStyle(color: Colors.white),
                         labelText: "Cidade",
-                        labelStyle: TextStyle(
-                          color: Colors.white,
-                        ),
-                        prefixIcon: Icon(
-                          Icons.location_city,
-                          color: Colors.white,
-                        ),
+                        labelStyle: TextStyle(color: Colors.white),
+                        prefixIcon: Icon(Icons.location_city, color: Colors.white),
                         border: UnderlineInputBorder(
                           borderSide: BorderSide(color: Colors.white),
                         ),
                       ),
+                      validator: (text) => text == null || text.isEmpty
+                          ? 'Esse campo deve ser preenchido!'
+                          : null,
                     ),
                     Padding(padding: EdgeInsets.only(bottom: 10)),
                     DropdownButton<String>(
@@ -214,6 +203,9 @@ class _LoginScreenState extends State<LoginScreen> {
                     Padding(padding: EdgeInsets.only(bottom: 10)),
                     ElevatedButton(
                       onPressed: () async {
+                        if (!_formKey.currentState!.validate()) {
+                          return;
+                        }
                         try {
                           await Supabase.instance.client.from('users').insert([
                             {
